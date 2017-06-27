@@ -1,1 +1,5 @@
 env: foo 
+
+logger:
+  levels:
+    "[all]" : FATAL

@@ -113,10 +113,12 @@ module.exports = {
       }),
       'error handler should work' : block( () => {
           var orig;
+          var emittedErr;
           return { 
             beforeAll: () => { 
                 orig = app.get('db').get;
-                app.get('db').get = function() { throw new Error('oups') }
+                app.get('db').get = function() { throw new Error('oups') };
+                process.once('error', (err) => { emittedErr = err })
             },
             afterAll: () => { app.get('db').get = orig },
             'get should work' : (done) => {

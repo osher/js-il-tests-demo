@@ -1,0 +1,38 @@
+{
+  "name": "jsil-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib",
+  "scripts": {
+    "test": "mocha",
+    "prepush": "mocha",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot",
+    "postcover": "node node_modules/istanbul/lib/cli.js check-coverage --function 90 --lines 85 --branches 75"
+  },
+  "license": "SEE LICENSE IN LISENCE.md",
+  "dependencies": {
+    "async": "^2.5.0",
+    "body-parser": "^1.17.2",
+    "config": "^1.26.1",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "figlet": "^1.2.0",
+    "log4js": "^1.1.1",
+    "redis": "^2.7.1"
+  },
+  "devDependencies": {
+    "istanbul": "*",
+    "mocha": "~2.3.4",
+    "mocha-ui-exports": "^1.0.1",
+    "request": "^2.81.0",
+    "should": "^11.2.1",
+    "sinon": "^2.3.5"
+  },
+  "repository": {
+    "type": "hg",
+    "url": "http://git.mobimate.local/worldmate/jsil-demo"
+  },
+  "publishConfig": {
+    "registry": "http://wm-npm.mobimate.com/"
+  }
+}

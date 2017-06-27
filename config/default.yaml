@@ -1,0 +1,17 @@
+web:
+  port: 3000
+  cors: 
+    origin:               http://localhost:8080
+    optionsSuccessStatus: 200
+
+db:
+  redis:
+    port: 6379
+    db:   15
+  
+env: stage
+logger:
+  levels:
+    "[all]": DEBUG
+  appenders:
+    - type: console

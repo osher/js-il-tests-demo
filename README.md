@@ -1,3 +1,3 @@
-#jsil-test-demo
+# jsil-test-demo
 
-a mock project to be used as discussion about tests
+a mock project to be used in a discussion about tests
